@@ -1,2 +1,17 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<section class="hero is-dark is-fullheight">
+  <div class="hero-body has-text-centered">
+    <div class="container">
+      <h1 class="title has-text-weight-light">
+        YOUR MUSIC <br />
+        <span class="has-text-primary">APP</span>
+      </h1>
+      <br />
+      <h2 class="subtitle has-text-weight-light white">
+        Albums • Last musics<br />
+        More played • Recomended
+      </h2>
+      <br /><br />
+      <%= link_to "SIGN IN NOW", new_user_registration_path, class: "button is-medium is-outlined is-primary" %>
+    </div>
+  </div>
+</section>
