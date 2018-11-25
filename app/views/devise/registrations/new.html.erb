@@ -1,0 +1,50 @@
+<section class="hero is-dark is-fullheight">
+  <div class="hero-body has-text-centered">
+    <div class="container">
+      <h1 class="title has-text-weight-light">
+        SIGN IN<br />
+      </h1>
+
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="field">
+          <p class="control has-icons-left has-icons-right">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "E-mail",class: "input is-primary" %>
+            <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+            </span>
+            <span class="icon is-small is-right">
+              <i class="fas fa-check"></i>
+            </span>
+          </p>
+        </div>
+
+        <div class="field">
+          <p class="control has-icons-left">
+            <%= f.password_field :password, autocomplete: "new-password",
+            placeholder: "Password (#{@minimum_password_length} characters minimum)", class: "input is-primary" %>
+            <span class="icon is-small is-left">
+              <i class="fas fa-lock"></i>
+            </span>
+          </p>
+        </div>
+
+        <div class="field">
+          <p class="control has-icons-left">
+            <%= f.password_field :password_confirmation, autocomplete: "new-password",
+            placeholder: "Password Confirmation(#{@minimum_password_length} characters minimum)", class: "input is-primary" %>
+            <span class="icon is-small is-left">
+              <i class="fas fa-lock"></i>
+            </span>
+          </p>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Sign up", class: "button is-outlined is-success" %>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</section>
