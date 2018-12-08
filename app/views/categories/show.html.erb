@@ -1,5 +1,5 @@
-<section class="section has-text-white has-text-centered">
-  <h2 class="is-size-3 has-text-weight-bold"><%= @category.name %></h2>
+<section class="section has-text-white has-text-centered categories">
+  <h2 class="is-size-5"><%= @category.name %></h2>
   <br />
   
   <%= render "shared/tabs", artists: @category.artists, songs: @category.songs, albums: @category.albums %>
