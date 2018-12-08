@@ -1,10 +1,10 @@
-<section class="section has-text-white has-text-centered">
-  <h2 class="is-size-5 has-text-weight-light">Buscar</h2>
+<section class="section has-text-white has-text-centered search">
+  <h2 class="is-size-5 has-text-weight-light">Search</h2>
   <br />
   <div class="field">
     <%= form_with url: searches_path, method: :get, local: true do |f| %>
       <p class="control has-icons-right">
-        <%= f.text_field :search, class: "input is-medium", type: "text", placeholder: "Álbuns, Artistas ou Músicas" %>
+        <%= f.text_field :search, class: "input is-medium", type: "text", placeholder: "Albums, Artists or Musics" %>
         <span class="icon is-small is-right">
           <i class="fas fa-search"></i>
         </span>
@@ -15,7 +15,7 @@
   <div class="columns is-multiline is-mobile">
     <% Category.all.each do |category| %>
       <div class="column is-half-mobile is-one-quarter-desktop">
-        <%= link_to "" do %>  
+        <%= link_to category do %>  
           <%= image_tag url_for(category.image) %>
         <% end %>
       </div>
